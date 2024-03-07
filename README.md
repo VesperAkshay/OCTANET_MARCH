@@ -13,6 +13,8 @@ This repository contains the source code for a landing page designed for [Your P
 - **Customizable**: The landing page is easily customizable, allowing project/product owners to tailor the content, design, and CTA elements to their specific needs.
 
 ## Screenshots
+![landing page](https://github.com/VesperAkshay/OCTANET_MARCH/assets/118452811/1f196c1b-c748-421b-a7d6-8fdf17e8a84f)
+![landing page 2](https://github.com/VesperAkshay/OCTANET_MARCH/assets/118452811/ea954436-e610-480d-8e83-06c2902d14f9)
 
 
 ## Installation
@@ -46,7 +48,7 @@ Contributions to improve the landing page are welcome! If you'd like to contribu
 
 ## Contact
 
-For any inquiries or support, please contact [Akshay PAtel](mailto:5638.akshay@gmail.com).
+For any inquiries or support, please contact [Akshay Patel](mailto:5638.akshay@gmail.com).
 
 ---
 
