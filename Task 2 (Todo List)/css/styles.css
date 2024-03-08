@@ -1,0 +1,33 @@
+/* Basic CSS styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  .todo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .todo-item {
+    margin-bottom: 10px;
+  }
+  .todo-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  .add-todo {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .todo-item.urgent {
+    border: 2px solid red;
+  }
+  .todo-item.important {
+    border: 2px solid orange;
+  }
+  .todo-item.low {
+    border: 2px solid green;
+  }
+  
+  
