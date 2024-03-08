@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-  <div class="container mx-auto p-4">
-    <h2 class="text-2xl font-bold mb-4">To-Do List</h2>
-    <div id="todo-list"></div>
-    <input type="text" id="new-todo" placeholder="Add new task..." class="block w-full p-2 border rounded mb-2">
-    <select id="category" class="block w-full p-2 border rounded mb-2">
-      <option value="design">Design</option>
-      <option value="development">Development</option>
-      <option value="content">Content Creation</option>
-      <option value="seo">SEO</option>
-    </select>
-    <textarea id="description" placeholder="Task description..." class="block w-full p-2 border rounded mb-2"></textarea>
-    <input type="datetime-local" id="deadline" class="block w-full p-2 border rounded mb-2">
-    <select id="priority" class="block w-full p-2 border rounded mb-2">
-      <option value="urgent">Urgent</option>
-      <option value="important">Important</option>
-      <option value="low">Low Priority</option>
-    </select>
-    <input type="text" id="labels" placeholder="Add labels/tags..." class="block w-full p-2 border rounded mb-2">
-    <button id="add-button" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Add Task</button>
-    <button id="sort-button" class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 ml-2">Sort by Priority</button>
-  </div>
-  <script src="js/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!-- ====== BOX ICONS ====== -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ====== SORTABLE / DRAG JS -->
+        <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
+        <title>TODO APP</title>
+    </head>
+    <body class="page">
+
+        <!-- ====== HERO IMAGE ====== -->
+        <div class="hero__img"></div>
+
+        <div class="wrapper">
+            <!-- ====== HEADER TEXT ====== -->
+            <div class="header__text">
+                <h2>TODO</h2>
+                <button class="dark__toggle"></button>
+            </div>
+
+            <!-- ====== INPUT ====== -->
+            <div class="task__input">
+                <button class="input__button"></button>
+                <input type="text" placeholder="Create a new todo...">
+            </div>
+
+            <!-- ====== TASK BOX ====== -->
+            <ul class="task__box">
+
+            </ul>
+
+            <!-- ====== OPTIONS ====== -->
+            <div class="options">
+                <div class="left__container">
+                    <span class="count">0</span>
+                    <p>items left</p>
+                </div>
+
+                <span class="clear__button">Clear Completed</span>
+            </div>
+
+            <!-- ====== CONTROLS ====== -->
+            <div class="controls">
+                <div class="filters">
+                    <span id="all" class="active">All</span>
+                    <span id="pending">Active</span>
+                    <span id="completed">Completed</span>
+                </div>
+            </div>
+
+            <h2 class="dragMsg">Drag and drop reorder list</h2>
+            
+            <div class="git">
+                <a href="https://github.com/VesperAkshay"><i class='bx bxl-github'></i>Github</a>
+            </div>
+        </div>
+        
+        <script src="assets/js/main.js"></script>
+        
+    </body>
 </html>

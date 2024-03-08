@@ -1,0 +1,425 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+//Light Theme
+
+$VeryLightGray: hsl(0, 0%,98%);
+$VeryLightGrayishBlue: hsl(236 ,33% ,92% );
+$LightGrayishBlue: hsl(233 ,11% ,84% );
+$DarkGrayishBlue: hsl(236 ,9%, 61%) ;
+$VeryDarkGrayishBlue: hsl(235 ,19% ,35% );
+$activeLink: #2d54ad; 
+$activeLinkHover: #6888d3; 
+
+
+//DarkTheme
+
+$VeryDarkBlue: hsl(235 ,21% ,11% );
+$VeryDarkDesaturatedBlue: hsl(235 ,24% ,19% );
+$LightGrayishBlue: hsl(234 ,39% ,85% );
+$LightGrayishBlueHover: hsl(236 ,33% ,92% );
+$DarkGrayishBlue: hsl(234 ,11% ,52% );
+$VeryDarkGrayishBlue: hsl(233 ,14% ,35% );
+$VeryDarkGrayishBlue: hsl(237 ,14% ,26% );
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans';
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+body {
+    background: $LightGrayishBlue;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 40%;
+    transition: .4s ease-in-out;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius:.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+// DARK MODE
+.dark {
+    background: $VeryDarkBlue;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 40%;
+    transition: .4s ease-in-out;
+    
+    .wrapper {
+        .header__text {
+            button {
+                background: url("../img/icon-sun.svg");
+            }
+        }
+
+        .task__input {
+            background: $VeryDarkDesaturatedBlue;
+
+            button {
+                border: 1px solid $DarkGrayishBlue;
+            }
+
+            input {
+                color: $VeryLightGray;
+            }
+        }
+
+        .task__box {
+            background: $VeryDarkDesaturatedBlue;
+            color: $DarkGrayishBlue;
+
+            li {
+                border-bottom: .5px solid $DarkGrayishBlue;
+            }
+
+            li:hover {
+                background: $VeryDarkGrayishBlue;
+            }
+        }
+
+        .options {
+            background: $VeryDarkDesaturatedBlue;
+
+            .clear__button:hover {
+                color: $VeryLightGrayishBlue;
+            }
+        }
+        
+        .controls {
+            .filters{
+                background: $VeryDarkDesaturatedBlue;
+            }
+        }
+
+        .git {
+            margin: 2.5rem 0;
+            a {
+                font-weight: 600;
+                border-radius:.5rem;
+                color: $VeryLightGray;
+                padding: .7rem;
+                background: $VeryDarkDesaturatedBlue;
+                
+            }
+        }
+    }
+}
+
+.hero__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/bg-gif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+
+}
+
+
+.wrapper {
+    position: relative;
+    max-width: 340px;
+    margin: 1rem auto;
+
+    // ====== HEADER TEXT ======
+    .header__text{
+        display: flex;
+        justify-content:space-between;
+        font-size: 1rem;
+        margin: 1.5rem auto;
+        color: $VeryLightGray;
+
+        h2 {
+            letter-spacing: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+            width: 25px;
+            height: 25px;
+            background: url("../img/icon-moon.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position :center center;
+            border: none;
+            transition: .4s ease-in-out;
+            
+        }
+    }
+    
+    // ====== TASK INPUT ======
+    .task__input {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 1.5rem auto;
+        padding: .5rem 0;
+        border-radius: .5rem;
+        background: $VeryLightGray;
+        transition: .4s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+        
+        button{
+            cursor: pointer;
+            padding: .8rem;
+            background: none;
+            border: 1px solid $LightGrayishBlue;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-left: .3rem;
+            border: none;
+            background: none;
+        }
+        
+        :focus {
+            outline: none;
+        }
+    }
+    
+    // ====== TASK BOX ======
+    .task__box {
+        background: $VeryLightGray;
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+        min-height: 15rem;
+        padding-top: .5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        // overflow: scroll;
+        // overflow-x: hidden;
+        
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            overflow-X: hidden;
+            font-size:  .9rem;
+            border-bottom: 1px solid $VeryLightGrayishBlue;
+            transition: .4s ease-in-out;
+            
+            label {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                color: #8e90a5;
+                
+                input {
+                    cursor: pointer;
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                    background: none;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    border: 1px solid $LightGrayishBlue;
+                    border-radius: 50%;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    transition: .4s ease-in-out;
+                }
+                
+                :checked {
+                    border: none;
+                    background: url("../img/icon-check.svg"), linear-gradient(to right bottom, #78b7ee, #75abf2, #7c9ef4, #8c8ef1, #a07ce8);;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+
+                p.checked {
+                    text-decoration: line-through;
+                }
+            }
+            
+
+            .liOptions{
+                display: flex;
+                align-items: center;
+
+                .bxs-pencil {
+                    cursor: pointer;
+                    color: #3a3c55;
+                    margin-right: 3px;
+                    font-size: 1.4rem;
+                }
+                
+                .bx-x {
+                    cursor: pointer;
+                    color: #3a3c55;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    
+    // OPTIONS
+    .options {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        background: $VeryLightGray;
+        border-bottom-left-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+        color: $DarkGrayishBlue;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: .4s ease-in-out;
+        
+        .left__container {
+            display: flex;
+            align-items: center;
+            
+            p {
+                margin-left: 5px;
+            }
+        }
+
+        .clear__button {
+            cursor: pointer;
+            transition: .4s ease-in-out;
+        }
+
+    }
+    
+    
+    // ====== CONTROLS ======
+    .filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem 0;
+        background: $VeryLightGray;
+        border-radius: .5rem;
+        transition: .4s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+        span {
+            color: $DarkGrayishBlue;
+            font-weight: 700;
+            margin: 0 .6rem;
+            cursor: pointer;
+            transition: .4s ease-in-out;
+            
+        }
+        
+        :hover {
+            color: $activeLinkHover;
+        }
+        
+        .active {
+            color: $activeLink;
+        }
+    }
+
+    .dragMsg {
+        cursor: pointer;
+        margin: 40px auto;
+        font-size: 1rem;
+        color: $DarkGrayishBlue;
+        text-align: center;
+    }
+
+    .git {
+        display: inline-block;
+        margin: 2.5rem 0;
+        transition: .4s ease-in-out;
+        box-shadow: 0px 10px 0px -100px rgba(0,0,0,0.1);
+        border-radius:.5rem;
+        a {
+            height: 6rem;
+            font-weight: 600;
+            border-radius:.5rem;
+            color: $VeryDarkBlue;
+            margin: 2rem 0;
+            padding: .7rem;
+            background: $VeryLightGray;
+            transition: .4s ease-in-out;
+        }
+        
+        a:hover {
+            transition: .4s ease-in-out;
+            box-shadow: 0px 10px 11px -6px rgba(0,0,0,0.1);
+
+        }
+    }
+    
+    .git:hover{
+        transform: scale(110%);
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    body {
+        background: $LightGrayishBlue;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 40%;
+        transform: .4s ease-in-out;
+        
+    }
+
+    .hero__img {
+        background-position: 100% 40%;
+        height: 15rem;
+    }
+
+    .wrapper {
+        max-width: 500px;
+
+        .dragMsg {
+            font-size: 1rem;
+        }
+        
+    }
+    
+    .dark {
+        background: $VeryDarkBlue;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 40%;
+    }
+
+}
